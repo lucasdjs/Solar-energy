@@ -1,0 +1,88 @@
+.main-header
+{
+    text-align: right;
+    position: fixed; /*fixar pagina*/
+    top: 0; /*cima*/
+    left: 0;/*esquerda*/
+    height: 100%; /*altura*/
+    width: 45%;/*largura*/
+    
+    background-image: url(img-login.jpg);
+    background-size: 100% 100%; /*A propriedade background-size do CSS especifica o tamanho das imagens de fundo.*/
+
+}
+.main-content{
+    background-color: rgb(250, 248, 248);
+    width: 55%;
+    margin-left: 45%;
+    height: 100%;
+    
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+    }
+    p{
+        font-family: 'Roboto Slab';
+        font-style: bold;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+
+        color: #374557;
+
+    }
+ 
+  form{
+      
+        margin:40px 100px;
+      .btn{
+        background-color: #49bf9d;
+        padding: 10px 50px;        
+        font-size: 15px;
+        font-family:'Roboto Slab', "FontAwesome",  ;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      
+        
+      }
+      .mb-3{
+          position: relative;
+          
+      }
+      input#forma_1{
+        font-size: 15px;
+
+        font-family:'Roboto Slab', "FontAwesome",  ;
+
+        /* aqui você define a cor */
+        color: #3d3d3d;
+      }
+      input#forma_2{
+
+        font-size: 15px;
+
+        font-family:'Roboto Slab', "FontAwesome",  ;
+
+        /* aqui você define a cor */
+        color: #3d3d3d;
+    }
+
+  }
+}
+.login-header{
+    background-color: rgb(250, 248, 248);
+    width: 100%;
+    overflow: hidden;
+}
+main{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+      

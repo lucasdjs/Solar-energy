@@ -1,0 +1,37 @@
+<div class="col header-components">
+  <div class="container">
+    <h1>Unidades</h1>
+
+    <div class="container list-units">
+       <h4 class="subtitle">Lista de unidades</h4>
+       <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Apelido</th>
+            <th scope="col">Local</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listaUnidades">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.apelido}}</td>
+            <td>{{item.local}}</td>
+            <td>{{item.marca}}</td>
+            <td>{{item.modelo}}</td>
+            <td><button type="button" class="btn btn-outline-primary button_editar">Editar</button></td>
+            <td><button type="button" class="btn btn-danger ">Remover</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-primary new-unity-button" [routerLink]="'/new-unity'">Nova Unidade</button>
+   </div>
+
+  </div>
+  </div>
+

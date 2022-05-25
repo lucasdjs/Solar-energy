@@ -1,0 +1,57 @@
+.header-principal{
+    background-color: rgb(250, 248, 248);
+    width: 100%;
+    position: fixed; /*fixar pagina*/
+    top: 0; /*cima*/
+    left: 0;/*esquerda*/
+    height: 100%; /*altura*/
+    width: 20%;/*largura*/
+    
+    
+    img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+    width: 100%
+    }
+    .option-list{
+       
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 27px;
+        li{
+            margin-top: 20px;
+            list-style:none;
+            
+               
+            a{
+                text-decoration: none;
+                color: #A098AE;
+            }
+        }
+        li:hover{
+            background-color: #49bf9d;
+            color: white;
+            padding: 15px;
+            margin-right: 40px;
+            animation: pulsate 1s ease-in-out;
+            border-radius: 20px;
+            a{
+     
+                color: white;
+            }
+         
+        }
+        @keyframes pulsate {
+            0%{
+                box-shadow: 0 0 25px #71ffd7,
+                0 0 50px  #9dcec0,
+            }
+            
+        }
+    }
+}

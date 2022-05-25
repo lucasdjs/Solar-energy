@@ -1,0 +1,50 @@
+<div class="login-header">
+
+ <div class="row">
+        <header>
+            <div class="main-header col-6"></div>
+        </header>
+
+
+            <main>
+            <div class="main-content col-6">
+                <img src="/assets/logo-teste.png" alt="">
+                <p>Seja bem vindo</p>
+
+                <form [formGroup]="CustomerForm" (submit)="validar()">
+
+                    <div class="mb-3 md-form form-group"  >
+
+                      <input name="email"
+                       type="email"
+                      class="form-control"
+                        id="forma_1" placeholder="&#xf0e0; E-mail" [ngClass]="CustomerForm.get('email')?.errors ? 'is-invalid': ' ' " formControlName="email"  [(ngModel)]="email" required="">
+                
+                      <div class="invalid-feedback">
+                       Por favor insira um e-mail válido
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                    
+                      <input type="password" name="password" id="forma_2" class="form-control" placeholder="&#xf023; Senha"  [ngClass]="CustomerForm.get('password')?.errors ? 'is-invalid': ' ' " formControlName="password" [(ngModel)]="password" required >
+                      <div class="invalid-feedback">
+                        Favor inserir uma senha de 8 digitos
+                       </div>
+                    </div>                    
+               <button type="submit" class="btn btn-primary mr-2"   [disabled]="CustomerForm.invalid" routerLink="dashboard" (click)="validar()">Entrar</button>
+                  </form>
+            </div>
+
+        
+        </main>
+
+
+    </div>
+
+
+</div>
+
+
+
+
