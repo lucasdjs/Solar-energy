@@ -48,7 +48,7 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="ativo" [(ngModel)]="listaUnidades.ativo">
                   <label class="form-check-label" for="exampleCheck1">Ativo</label>
                 </div>
-                <button type="submit" class="btn btn-primary new-unity-button"[disabled]="CustomerForm.invalid">Salvar</button>
+                <button type="submit" class="btn btn-primary new-unity-button"[disabled]="CustomerForm.invalid" (click)="atualizarUnidade()">Salvar</button>
                 
               </form>
     
