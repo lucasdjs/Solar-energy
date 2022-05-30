@@ -35,6 +35,7 @@ export class UnidadesComponent implements OnInit {
       let totalUnidades = lista_dashboard[0]
       let unidadesAtivas = lista_dashboard[1]
       let unidadesInativas = lista_dashboard[2]
+      let mediaUnidades = lista_dashboard[3]
 
       const converteUnd = JSON.stringify(resultado)
       

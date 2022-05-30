@@ -4,24 +4,35 @@
     <h1>Lançamento de geração mensal</h1>
     <div class="container list-units">
 
-      <form>
+      <form [formGroup]="CustomerForm" (submit)="cadastrarEnergia()">
         <div class="mb-3">
           <label for="unidade_geradora" class="form-label">Unidade geradora</label>
           
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example"  formControlName="id">
             <option selected >Selecione uma opção</option>
-            <option value="1" *ngFor="let item of listaUnidades" (ngModel)="apelido" required >{{item.apelido}}</option>
+            <option [ngValue]="item.id" *ngFor="let item of listaUnidades" (ngModel)="apelido" required>{{item.apelido}}</option>
           </select>
         </div>
+
+
+
         <div class="mb-3">
         <label for="date" class="form-label">Mês/ano</label>  
-        <input type="date" class="form-control" >
+        <input type="date" class="form-control" [(ngModel)]="data" formControlName="data">
           </div>
+
+
+
+
           <div class="mb-3">
             <label for="kw_gerado" class="form-label">Total kw gerado</label>
-            <input type="number" class="form-control" id="total" placeholder="Digite o valor" required [(ngModel)]="total" >
+            <input type="number" class="form-control" id="total" placeholder="Digite o valor" required [(ngModel)]="total" formControlName="total">
           </div>
-          <button type="submit" class="btn btn-primary new-unity-button" (click)="cadastrarEnergia('unidade')">Cadastrar</button>
+
+
+
+
+          <button type="submit" class="btn btn-primary new-unity-button">Cadastrar</button>
           
 
 

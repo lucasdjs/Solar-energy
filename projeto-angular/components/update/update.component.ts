@@ -53,7 +53,7 @@ export class UpdateComponent implements OnInit {
 
   atualizarUnidade(): void {
     this.update(this.listaUnidades).subscribe(() => {
-      alert('produto atualizado');
+      alert('Produto atualizado!');
       this.router.navigate(['/unidade']);
     });
   }
