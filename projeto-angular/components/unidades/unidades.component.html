@@ -23,8 +23,9 @@
             <td>{{item.local}}</td>
             <td>{{item.marca}}</td>
             <td>{{item.modelo}}</td>
-            <td><button type="button" class="btn btn-outline-primary button_editar">Editar</button></td>
-            <td><button type="button" class="btn btn-danger ">Remover</button></td>
+            <!-- <td><button type="button" class="btn btn-outline-primary button_editar" (click)="editar(item)">Editar</button></td> -->
+            <td><button type="button" class="btn btn-outline-primary button_editar" routerLink="/update/{{item.id}}">Editar</button></td> 
+            <td><button type="button" class="btn btn-danger " (click)="remover(item.id)">Remover</button></td>
           </tr>
         </tbody>
       </table>

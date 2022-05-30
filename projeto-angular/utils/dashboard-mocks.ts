@@ -1,4 +1,13 @@
+import { unidades } from "models/modelo.unidades";
+import { lista_unidades } from "./unidades-mock";
+import { UnidadesComponent } from "components/unidades/unidades.component";
+import { HttpClient } from "@angular/common/http";
 
- export const lista_dashboard =[
-    {titulo:"Total de unidades",unidade:1},{titulo:"Unidades Ativas",unidade:0}, {titulo:"Unidades Inativas",unidade:2},{titulo:"Média de unidades",unidade:1}
+
+ export let lista_dashboard =[
+    {titulo:"Total de unidades",unidade:0},
+    {titulo:"Unidades Ativas",unidade:0}, 
+    {titulo:"Unidades Inativas",unidade:0},
+    {titulo:"Média de unidades",unidade:0}
   ]
+

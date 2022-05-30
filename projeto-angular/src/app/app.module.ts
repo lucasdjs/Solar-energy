@@ -12,6 +12,9 @@ import { UnidadesComponent } from 'components/unidades/unidades.component';
 import { LancamentoGeracaoMensalComponent } from 'components/lancamento-geracao-mensal/lancamento-geracao-mensal.component';
 import { HomeComponent } from 'pages/home/home.component';
 import { NewUnitsComponent } from 'components/new-units/new-units.component';
+import { UpdateComponent } from '../../components/update/update.component';
+
+
 
 
 const ROUTES: Route[] =[
@@ -42,6 +45,11 @@ const ROUTES: Route[] =[
       path:'new-unity',
       component: NewUnitsComponent
      },
+     {
+     path:'update/:id',
+     component: UpdateComponent
+     }
+
     
 ]
 
@@ -56,7 +64,9 @@ const ROUTES: Route[] =[
     LancamentoGeracaoMensalComponent,
     UnidadesComponent,
     HomeComponent,
-    NewUnitsComponent
+    NewUnitsComponent,
+    UpdateComponent,
+    
   ],
   imports: [
     BrowserModule,

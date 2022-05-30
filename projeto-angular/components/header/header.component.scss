@@ -8,6 +8,7 @@
     width: 20%;/*largura*/
     
     
+    
     img{
     display: inline-block;
     margin-left: auto;
@@ -17,7 +18,7 @@
     width: 100%
     }
     .option-list{
-       
+        text-decoration: none;
         font-family: 'Poppins';
         font-style: normal;
         font-weight: bold;
@@ -26,11 +27,15 @@
         li{
             margin-top: 20px;
             list-style:none;
+         
+            color: #A098AE;
             
                
             a{
-                text-decoration: none;
+            
                 color: #A098AE;
+                
+                
             }
         }
         li:hover{
@@ -40,6 +45,7 @@
             margin-right: 40px;
             animation: pulsate 1s ease-in-out;
             border-radius: 20px;
+            
             a{
      
                 color: white;

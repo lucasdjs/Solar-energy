@@ -1,19 +1,92 @@
 {
-  "posts": [
+  "lista_dashboard": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "titulo": "Total de unidades",
+      "unidade": 1
+    },
+    {
+      "titulo": "Unidades Ativas",
+      "unidade": 20
+    },
+    {
+      "titulo": "Unidades Inativas",
+      "unidade": 2
+    },
+    {
+      "titulo": "Média de unidades",
+      "unidade": 1
     }
   ],
-  "comments": [
+  "lista_unidades": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "apelido": "teste",
+      "local": "das",
+      "marca": "dada",
+      "modelo": "das",
+      "ativo": true,
+      "id": 1
+    },
+    {
+      "apelido": "teste",
+      "local": "das",
+      "marca": "dsa",
+      "modelo": "dsa",
+      "id": 2
+    },
+    {
+      "apelido": "teste",
+      "local": "das",
+      "marca": "dasda",
+      "modelo": "151",
+      "ativo": false,
+      "id": 3
+    },
+    {
+      "apelido": "teste",
+      "local": "teste",
+      "marca": "teste",
+      "modelo": "155w",
+      "ativo": false,
+      "id": 4
+    },
+    {
+      "apelido": "dsdad",
+      "local": "das",
+      "marca": "das",
+      "modelo": "das",
+      "ativo": true,
+      "id": 5
+    },
+    {
+      "apelido": "teste",
+      "local": "das",
+      "marca": "dada",
+      "modelo": "dasda",
+      "id": 6
+    },
+    {
+      "apelido": "teste",
+      "local": "teste",
+      "marca": "dsa",
+      "modelo": "151",
+      "ativo": false,
+      "id": 7
+    },
+    {
+      "apelido": "teste",
+      "local": "das",
+      "marca": "dad",
+      "modelo": "dsa",
+      "ativo": true,
+      "id": 8
+    },
+    {
+      "apelido": "teste",
+      "local": "das",
+      "marca": "dad",
+      "modelo": "155w",
+      "ativo": true,
+      "id": 9
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

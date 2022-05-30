@@ -9,21 +9,19 @@
           <label for="unidade_geradora" class="form-label">Unidade geradora</label>
           
           <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected >Selecione uma opção</option>
+            <option value="1" *ngFor="let item of listaUnidades" (ngModel)="apelido" required >{{item.apelido}}</option>
           </select>
         </div>
         <div class="mb-3">
         <label for="date" class="form-label">Mês/ano</label>  
-        <input type="date" class="form-control">
+        <input type="date" class="form-control" >
           </div>
           <div class="mb-3">
             <label for="kw_gerado" class="form-label">Total kw gerado</label>
-            <input type="number" class="form-control" id="apelido" placeholder="Digite o valor" required>
+            <input type="number" class="form-control" id="total" placeholder="Digite o valor" required [(ngModel)]="total" >
           </div>
-          <button type="submit" class="btn btn-primary new-unity-button">Cadastrar</button>
+          <button type="submit" class="btn btn-primary new-unity-button" (click)="cadastrarEnergia('unidade')">Cadastrar</button>
           
 
 

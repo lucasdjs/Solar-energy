@@ -6,10 +6,10 @@
             <h4 class="subtitle">Cadastro de Unidade Geradora</h4>
 
            
-            <form [formGroup]="CustomerForm" (submit)="validar('unidade')">
+            <form [formGroup]="CustomerForm" (submit)="atualizarUnidade()">
                 <div class="mb-3">
                   <label for="apelido" class="form-label">Apelido</label>
-                  <input type="text" class="form-control" id="apelido" placeholder="Painel 1" [ngClass]="CustomerForm.get('apelido')?.errors ? 'is-invalid': ' ' " formControlName="apelido" [(ngModel)]="apelido" required >
+                  <input type="text" class="form-control" id="apelido" placeholder="Painel 1" [ngClass]="CustomerForm.get('apelido')?.errors ? 'is-invalid': ' ' " formControlName="apelido" name="apelido" [(ngModel)]='listaUnidades.apelido' required >
                   <div class="invalid-feedback">
                     Campo obrigatório
                    </div>
@@ -19,7 +19,7 @@
                 <div class="mb-3">
                   <label for="Local" class="form-label">Local</label>
                   <input type="text" class="form-control" id="local"
-                  placeholder="Rua Alberto 430"   [ngClass]="CustomerForm.get('local')?.errors ? 'is-invalid': ' ' " formControlName="local" [(ngModel)]="local" required >
+                  placeholder="Rua Alberto 430"   [ngClass]="CustomerForm.get('local')?.errors ? 'is-invalid': ' ' " formControlName="local" [(ngModel)]="listaUnidades.local" required >
                   <div class="invalid-feedback">
                     Campo obrigatório
                    </div>
@@ -28,7 +28,7 @@
 
                 <div class="mb-3">
                   <label for="marca" class="form-label">Marca</label>
-                  <input type="text" class="form-control" id="marca" placeholder="Resun"  [ngClass]="CustomerForm.get('marca')?.errors ? 'is-invalid': ' ' " formControlName="marca" [(ngModel)]="marca" required >
+                  <input type="text" class="form-control" id="marca" placeholder="Resun"  [ngClass]="CustomerForm.get('marca')?.errors ? 'is-invalid': ' ' " formControlName="marca" [(ngModel)]="listaUnidades.marca" required >
                   <div class="invalid-feedback">
                     Campo obrigatório
                    </div>
@@ -36,7 +36,7 @@
 
                 <div class="mb-3">
                   <label for="modelo" class="form-label">Modelo</label>
-                  <input type="text" class="form-control" id="modelo" placeholder="155w"  [ngClass]="CustomerForm.get('modelo')?.errors ? 'is-invalid': ' ' " formControlName="modelo" [(ngModel)]="modelo" required >
+                  <input type="text" class="form-control" id="modelo" placeholder="155w"  [ngClass]="CustomerForm.get('modelo')?.errors ? 'is-invalid': ' ' " formControlName="modelo" [(ngModel)]="listaUnidades.modelo" required >
                   <div class="invalid-feedback">
                     Campo obrigatório
                    </div>
@@ -45,7 +45,7 @@
 
 
                 <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="ativo" [(ngModel)]="ativo">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="ativo" [(ngModel)]="listaUnidades.ativo">
                   <label class="form-check-label" for="exampleCheck1">Ativo</label>
                 </div>
                 <button type="submit" class="btn btn-primary new-unity-button"[disabled]="CustomerForm.invalid">Salvar</button>

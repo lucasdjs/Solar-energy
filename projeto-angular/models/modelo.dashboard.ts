@@ -1,6 +1,6 @@
 
-export interface dashboard {
-    titulo:string,
+export class dashboard {
+    titulo:string
     unidade: number
 
     }

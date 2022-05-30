@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder,ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { unidades } from 'models/modelo.unidades';
 
 @Component({
   selector: 'DSE-new-units',
@@ -11,14 +14,17 @@ export class NewUnitsComponent implements OnInit {
   CustomerForm!: FormGroup;
   submitted = true;
 
-  apelido:string = "";
-  local:string = "";
-  marca:string = "";
-  modelo: string = "";
+  public listaUnidades: unidades;
+  
+
+  apelido:unidades;
+  local:unidades;
+  marca:unidades;
+  modelo: unidades;
+  ativo: boolean = false;
 
 
-
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private route:Router, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.CustomerForm = this.fb.group({
@@ -26,17 +32,21 @@ export class NewUnitsComponent implements OnInit {
       local: new FormControl(Validators.required),
       marca: new FormControl(Validators.required),
       modelo: new FormControl(Validators.required),
+      ativo: new FormControl(),
      
     })
 
     
 }
-validar(){
-  
-  this.submitted = true;
+validar(patch:string){
   
   if (this.CustomerForm.invalid) {
     return ;
   }
+
+  this.http.post( "http://localhost:3000/lista_unidades", this.CustomerForm.value ).subscribe(_ =>this.route.navigateByUrl(patch));
+
 }
+
+ 
 }

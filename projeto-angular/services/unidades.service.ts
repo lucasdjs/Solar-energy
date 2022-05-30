@@ -14,5 +14,9 @@ export class UnidadesService {
   getUnidades(): Observable<unidades[]>{
   return this._httpclient.get<unidades[]>(this.url);
   }
+  buscarId(id:string):Observable<unidades>{
+    const url = `http://localhost:3000/lista_unidades/` + id;
+    return this._httpclient.get<unidades>(url)
+  }
 }
 
